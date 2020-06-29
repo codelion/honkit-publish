@@ -1,12 +1,12 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
-inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+name: 'honkit-publish'
+description: 'Run make in a repository with honkit and calibre installed'
+author: 'dariusf'
+inputs:
+  target:
+    description: 'Target to make'
+    default: 'all'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.target }}
